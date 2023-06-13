@@ -39,38 +39,13 @@
 			<section id="banner" data-video="images/banner">
 				<div class="inner">
 					<img src="images/sc_logo.png" alt="" />
-					<h1>Shooting Creek Vines - Summer 2023</h1>
+					<h1>Shooting Creek Vines - Now Open</h1>
 					<p>Nestled at the foot of the Nantahala National Forest,<br>
                     come savor what nature has to offer.<br></p>
 					<a href="#footer" class="button scrolly">Visit</a>
 				</div>
 			</section>
 
-		<!-- One -->
-<!-- Margaret wants this out...
-			<section id="one" class="wrapper style2">
-				<div class="inner">
-					<div>
-						<div class="box">
-							<div class="image fit">
-								<img src="images/3B5F94FB-B3E4-4F2B-9839-0D9BA964D1FC.JPG" alt="" />
-							</div>
-							<div class="content">
-								<header class="align-center">
-									<h2>Great wines come from great grapes</h2>
-									<p>Influenced by the soil and all that's in it. This area of Western North Carolina finds its 
-										Its origins dating back over 20 million years ago. It is widely documented that the
-										Appalachian Mountains were once the tallest mountains on earth. Cooling and warming periods and continuous erosion give us more gentle slopes we see in the modern day.</p>
-								</header>
-								<hr />
-								<a href="outstory.html" class="button fit small">Read More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
--->
-		<!-- Two -->
 			<section id="two" class="wrapper style3">
 				<div class="inner">
 					<div id="flexgrid">
@@ -138,49 +113,5 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-			<!--Grafana Tracking Script-->>
-			<script>
-			(function () {
-			var webSdkScript = document.createElement("script");
-
-			webSdkScript.src =
-				"https://unpkg.com/@grafana/faro-web-sdk@^1.0.0/dist/bundle/faro-web-sdk.iife.js";
-
-			webSdkScript.onload = () => {
-				window.GrafanaFaroWebSdk.initializeFaro({
-				url: "https://faro-collector-us-central2.grafana.net/collect/5d10ac03667e1567c8a87e28ea691fc5",
-				app: {
-					name: "shootingcreekvines",
-					version: "1.0.0",
-					environment: "production",
-				},
-				});
-
-
-				// Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
-				// This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
-				var webTracingScript = document.createElement("script");
-
-				webTracingScript.src =
-				"https://unpkg.com/@grafana/faro-web-tracing@^1.0.0/dist/bundle/faro-web-tracing.iife.js";
-
-				// Initialize, configure (if necessary) and add the the new instrumentation to the already loaded and configured Web-SDK.
-				webTracingScript.onload = () => {
-				window.GrafanaFaroWebSdk.faro.instrumentations.add(
-					new window.GrafanaFaroWebTracing.TracingInstrumentation()
-				);
-				};
-
-				// Append the Web Tracing script script tag to the HTML page
-				document.head.appendChild(webTracingScript);
-			};
-
-			// Append the Web-SDK script script tag to the HTML page
-			document.head.appendChild(webSdkScript);
-			})();
-			</script>
-
-
 	</body>
 </html>
